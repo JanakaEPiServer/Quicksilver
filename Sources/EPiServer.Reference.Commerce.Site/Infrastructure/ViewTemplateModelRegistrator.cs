@@ -1,6 +1,7 @@
 ﻿using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.Framework.Web;
+using EPiServer.Reference.Commerce.Site.Features.Teaser.Blocks;
 using EPiServer.ServiceLocation;
 using EPiServer.Web.Mvc;
 using System;
@@ -22,6 +23,14 @@ namespace EPiServer.Reference.Commerce.Site.Infrastructure
                 AvailableWithoutTag = true,
                 TemplateTypeCategory = TemplateTypeCategories.MvcPartialView,
                 Path = "~/Views/Shared/_Page.cshtml"
+            });
+
+            viewTemplateModelRegistrator.Add(typeof(TeaserBlock), new TemplateModel
+            {
+                Name = "TeaserBlockWide",
+                Tags = new[] { Global.ContentAreaTags.Wide, Global.ContentAreaTags.Full },
+                AvailableWithoutTag = false,
+                Path = "~/Shared/TeaserBlockWide.cshtml"
             });
         }
     }

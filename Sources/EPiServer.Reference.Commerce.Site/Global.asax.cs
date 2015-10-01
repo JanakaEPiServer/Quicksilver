@@ -17,6 +17,16 @@ namespace EPiServer.Reference.Commerce.Site
 {
     public class Global : EPiServer.Global
     {
+        /// <summary>
+        /// Tags to use for the main widths used in the Bootstrap HTML framework
+        /// </summary>
+        public static class ContentAreaTags
+        {
+            public const string Full = "full";
+            public const string Wide = "wide";
+            public const string Narrow = "narrow";
+        }
+
         protected override void RegisterRoutes(RouteCollection routes)
         {
             base.RegisterRoutes(routes);

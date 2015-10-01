@@ -5,6 +5,7 @@ using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.Reference.Commerce.Site.Infrastructure;
 using EPiServer.SpecializedProperties;
+using EPiServer.Reference.Commerce.Site.Features.Teaser.Blocks;
 
 namespace EPiServer.Reference.Commerce.Site.Features.Start.Pages
 {
@@ -57,7 +58,7 @@ namespace EPiServer.Reference.Commerce.Site.Features.Start.Pages
             Description = "",
             GroupName = SystemTabNames.Content,
             Order = 7)]
-        [AllowedTypes(typeof(EntryContentBase))]
+        [AllowedTypes(typeof(EntryContentBase), typeof(TeaserBlock))]
         public virtual ContentArea ProductArea { get; set; }
 
         [Display(

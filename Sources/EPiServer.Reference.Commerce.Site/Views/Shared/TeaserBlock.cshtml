@@ -1,0 +1,15 @@
+@using EPiServer.Core
+@using EPiServer.Reference.Commerce.Site.Features.Teaser.Blocks
+@model TeaserBlock
+<div class="border">
+    <h2 @Html.EditAttributes(x => x.Heading)>@Model.Heading</h2>
+    @if (!ContentReference.IsNullOrEmpty(Model.MediaImage))
+    {
+    <div @Html.EditAttributes(x => x.MediaImage)><img src="@Url.ContentUrl(Model.MediaImage)" /></div>
+    }
+    else if (!string.IsNullOrEmpty(Model.MediaURL))
+    {
+        <iframe src="http://fast.wistia.net/embed/iframe/@Model.MediaURL" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"></iframe>
+    }
+    @Html.PropertyFor(m => m.Description)
+</div>
