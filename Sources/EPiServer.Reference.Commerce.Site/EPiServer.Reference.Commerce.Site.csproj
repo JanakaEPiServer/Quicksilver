@@ -490,6 +490,9 @@
     <Compile Include="Features\ErrorHandling\Controllers\ErrorHandlingController.cs" />
     <Compile Include="Features\ErrorHandling\Models\ErrorViewModel.cs" />
     <Compile Include="Features\ErrorHandling\Pages\ErrorPage.cs" />
+    <Compile Include="Features\Product\Controllers\TicketController.cs" />
+    <Compile Include="Features\Product\Models\TicketVariantViewModel.cs" />
+    <Compile Include="Features\Product\Models\TicketVariant.cs" />
     <Compile Include="Features\Shared\Extensions\StringExtensions.cs" />
     <Compile Include="Features\Payment\Models\CashOnDeliveryViewModel.cs" />
     <Compile Include="Features\Payment\Models\PaymentMethodViewModelResolver.cs" />
@@ -853,6 +856,7 @@
     <Content Include="Views\Shared\AgendaItemBlock.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Agenda\Index.cshtml" />
+    <Content Include="Views\Ticket\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -9,7 +9,7 @@ namespace EPiServer.Reference.Commerce.Site.Features.Search.Models
         MetaClassName = "FashionNode",
         DisplayName = "Fashion Node", 
         Description = "Display fashion products.")]
-    [AvailableContentTypes(Include = new[] { typeof(FashionProduct), typeof(FashionVariant), typeof(NodeContent)})]
+    [AvailableContentTypes(Include = new[] { typeof(FashionProduct), typeof(FashionVariant), typeof(TicketVariant), typeof(NodeContent)})]
     public class FashionNode : NodeContent
     {
 
