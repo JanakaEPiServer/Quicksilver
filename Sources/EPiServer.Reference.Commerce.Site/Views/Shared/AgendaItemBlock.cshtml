@@ -1,0 +1,25 @@
+﻿@using EPiServer.Core
+@using EPiServer.Reference.Commerce.Site.Features.Agenda.Blocks
+
+@model AgendaItemBlock
+
+<div class="row">
+    <div class="span9">
+        <div class="event-slot" data-color="@Model.StyleColour" data-icon="@Model.StyleIcon">
+            <img src="@Url.ContentUrl(Model.SpeakerImage)" alt="Session Image" @Html.EditAttributes(m => m.SpeakerImage)>
+            <div class="event-slot-content">
+                <div class="event-slot-header">
+                    <h2 style="font-weight:normal; font-size:22px">
+                        <span class="time" @Html.EditAttributes(m => m.Time)>@Model.Time.ToShortTimeString()</span><span class="colon">: </span>@Html.PropertyFor(m => m.Title)
+                    </h2><button>
+                        More information on
+                        @Model.Time.ToShortTimeString(): @Model.Title
+                    </button>
+                </div>
+                <div style="display: none;" class="event-slot-info">
+                    <p>@Html.PropertyFor(m => m.Description)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

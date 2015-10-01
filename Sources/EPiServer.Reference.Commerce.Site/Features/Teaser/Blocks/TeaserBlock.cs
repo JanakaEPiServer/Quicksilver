@@ -4,10 +4,11 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.Web;
+using EPiServer.Reference.Commerce.Site.Infrastructure;
 
 namespace EPiServer.Reference.Commerce.Site.Features.Teaser.Blocks
 {
-    [ContentType(DisplayName = "Teaser Block", GUID = "17124fde-d9f0-43fa-80d7-932d5ed0037e", Description = "Displays a marketing teaser", GroupName = "Marketing")]
+    [ContentType(DisplayName = "Teaser Block", GUID = "17124fde-d9f0-43fa-80d7-932d5ed0037e", Description = "Displays a marketing teaser", GroupName = GroupNames.Marketing)]
     public class TeaserBlock : BlockData
     {
         [CultureSpecific]
